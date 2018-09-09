@@ -1,2 +1,2 @@
 # scrapingTut
-Scraping Tutorial with Python
+Scraping Web Using Python Tutorial
