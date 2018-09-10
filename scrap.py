@@ -17,14 +17,13 @@ for row in table.findAll('article'):
     quote['link'] = row.div.a['href']
     quote['lines'] = row.div.a.img['alt']
     quote['image'] = row.div.a.img['src']
-    pprint(quote)
-    quotes.append(qoute)
+    quotes.append(quote)
 
 filename = 'inspirational_quotes.csv'
 
-with open(filename,'wb') as f:
-    w = csv.DictWriter(f,['theme','link','lines','image'])
+with open(filename,'w') as f:
+    w = csv.DictWriter(f,fieldnames = ['theme','link','lines','image'])
     w.writeheader()
-    for qoute in qoutes:
+    for quote in quotes:
         w.writerow(quote)
 
